@@ -4,8 +4,10 @@ import { ModalsProvider } from '@mantine/modals';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  let SERVER_URI = process.env.SERVER_URI;
+
   const client = new ApolloClient({
-    uri: '/api/graphql',
+    uri: SERVER_URI,
     cache: new InMemoryCache()
   });
 
