@@ -45,7 +45,6 @@ export function VideoItem(props: any) {
     return (
         <>
             <tr style={{ marginBottom: '100px' }}>
-                {/* <td><Text>{props.data.id}</Text></td> */}
                 <td><Text>{props.data.title}</Text></td>
                 <td><ActionIcon variant="transparent" onClick={() => setOpened(true)} style={{ display: 'flex' }}><Pencil2Icon /></ActionIcon></td>
                 <td><Checkbox onClick={toggleChecked} checked={props.data.published} /> </td>
