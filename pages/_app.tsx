@@ -4,10 +4,9 @@ import { ModalsProvider } from '@mantine/modals';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  let SERVER_URI = process.env.SERVER_URI;
 
   const client = new ApolloClient({
-    uri: SERVER_URI,
+    uri: "https://youtube-video-planner.vercel.app/api/graphql",
     cache: new InMemoryCache()
   });
 
